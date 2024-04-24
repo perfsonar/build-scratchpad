@@ -22,5 +22,5 @@ jobs:
 
       - name: Build in Place with One-Shot Builder
         run: >
-          curl -s https://raw.githubusercontent.com/perfsonar/docker-oneshot-builder/main/build
+          curl -s https://raw.githubusercontent.com/perfsonar/docker-oneshot-builder/main/build \
               | sh -s - . '${{ matrix.os }}'
