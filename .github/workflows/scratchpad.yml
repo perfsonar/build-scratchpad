@@ -14,22 +14,13 @@ jobs:
         os: [ 'el9' ]
  
     runs-on: ubuntu-latest
-
-#    container: 
-#      image: ghcr.io/perfsonar/docker-oneshot-builder/${{ matrix.os }}:latest      
-#      volumes:
-#        - ${{ github.workspace }}:/build
-        
+       
     steps:
 
       - name: Check out Repo
         uses: actions/checkout@v3
 
       - name: Build in Place with One-Shot Builder
-        run: curl -s https://raw.githubusercontent.com/perfsonar/docker-oneshot-builder/main/build | sh -s - . '${{ matrix.os }}'
-
-#       - name: Build it
-#         run: make
-
-
-         
+        run: >
+          curl -s https://raw.githubusercontent.com/perfsonar/docker-oneshot-builder/main/build
+              | sh -s - . '${{ matrix.os }}'
