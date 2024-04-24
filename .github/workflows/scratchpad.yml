@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         # Working
-        os: [ 'ol8', 'el9', 'u20' ]
+        os: [ 'ol8', 'el9', 'u20', 'd11', 'd12', 'u22' ]
         # Not working
         #os: [ 'd11', 'd12', 'u22' ]
 
