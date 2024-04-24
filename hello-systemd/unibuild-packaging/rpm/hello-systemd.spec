@@ -26,6 +26,9 @@ Test package that does things with systemd
 true
 
 %post
+
+ps -ef
+
 systemctl status
 
 %files
