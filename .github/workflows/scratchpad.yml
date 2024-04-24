@@ -15,7 +15,8 @@ jobs:
 
     container: 
       #image: ghcr.io/perfsonar/unibuild/${{ matrix.os }}:latest
-      options: --privileged
+      #options: --privileged
+      options: --privileged --volume /sys/fs/cgroup:/sys/fs/cgroup:ro
       image: ghcr.io/perfsonar/docker-oneshot-builder/${{ matrix.os }}:latest
       volumes:
       - ${{ github.workspace }}:/build
