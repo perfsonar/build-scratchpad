@@ -9,9 +9,7 @@ changecom()dnl
 #
 
 
-#hello
-#hello-deb
-#ifelse(PACKAGING,rpm,hello-rpm)
-
-# RPM only for now
-ifelse(PACKAGING,rpm,hello-systemd)
+hello
+hello-deb
+ifelse(PACKAGING,rpm,hello-rpm)
+hello-systemd
